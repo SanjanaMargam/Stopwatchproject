@@ -29,18 +29,7 @@ Used to store the interval ID without causing unnecessary re-renders.
 ### useEffect
 Used for cleanup operations to prevent memory leaks when the component unmounts.
 
-## Project Structure
 
-```text
-src/
-│
-├── components/
-│   └── Stopwatch.jsx
-│
-├── App.jsx
-├── index.js
-└── App.css
-```
 
 ## Installation and Setup
 
@@ -121,4 +110,4 @@ Through this project, I learned:
 
 ## Author
 
-Sanjana Patel
+Sanjana Margam
