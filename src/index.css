@@ -1,0 +1,50 @@
+
+.body{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background-color:#f0f0f0;
+
+
+}
+
+.stopwatch{
+  background-color:#b0ec83;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+.format{
+  font-size:2em;
+  margin-bottom:20px;
+  font-family: monospace;
+  color:#333;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  border:none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(124, 226, 226);
+  transition: background-color 0.3s ease;
+
+}
+.start:hover{
+  background-color: #6c61ea;
+}
+.stop:hover{
+  background-color: #6c61ea;
+}
+.reset:hover{
+  background-color: #6c61ea;
+}
+
