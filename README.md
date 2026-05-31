@@ -1,73 +1,124 @@
-# React + TypeScript + Vite
+# ⏱️ React Stopwatch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive Stopwatch application built using React. This project demonstrates the use of React Hooks such as `useState`, `useEffect`, and `useRef` to manage time, handle intervals, and control component behavior efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Start the stopwatch
+- Stop/Pause the stopwatch
+- Reset the stopwatch
+- Display elapsed time in Hours : Minutes : Seconds : Milliseconds format
+- Responsive and user-friendly interface
+- Efficient interval management using React Hooks
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
 
-## Expanding the ESLint configuration
+## React Concepts Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### useState
+Used to store and update the elapsed time displayed on the screen.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### useRef
+Used to store the interval ID without causing unnecessary re-renders.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### useEffect
+Used for cleanup operations to prevent memory leaks when the component unmounts.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
+
+```text
+src/
+│
+├── components/
+│   └── Stopwatch.jsx
+│
+├── App.jsx
+├── index.js
+└── App.css
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation and Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone the Repository
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone <repository-url>
 ```
+
+### 2. Navigate to Project Directory
+
+```bash
+cd stopwatch-project
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Development Server
+
+```bash
+npm run dev
+```
+
+If you are using Create React App:
+
+```bash
+npm start
+```
+
+### 5. Open in Browser
+
+Visit:
+
+```text
+http://localhost:5173
+```
+
+(Vite Default Port)
+
+or
+
+```text
+http://localhost:3000
+```
+
+(Create React App Default Port)
+
+## How to Use
+
+1. Click **Start** to begin timing.
+2. Click **Stop** to pause the stopwatch.
+3. Click **Reset** to clear the elapsed time and restart from zero.
+4. Observe the timer updating in real time.
+
+## Learning Outcomes
+
+Through this project, I learned:
+
+- React Functional Components
+- React Hooks (`useState`, `useEffect`, `useRef`)
+- State Management
+- Event Handling
+- Timer Management using `setInterval()`
+- Cleanup Functions in React
+- Component Re-rendering Behavior
+
+## Future Enhancements
+
+- Lap Timer Feature
+- Dark Mode Support
+- Save Recorded Times
+- Keyboard Shortcuts
+- Sound Notifications
+
+## Author
+
+Sanjana Patel
